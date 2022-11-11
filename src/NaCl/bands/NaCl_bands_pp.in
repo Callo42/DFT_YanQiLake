@@ -1,0 +1,6 @@
+&bands
+   outdir = './tmp/',
+   prefix='NaCl',
+   filband='NaCl_bands.dat',
+   lsym=.true.
+/

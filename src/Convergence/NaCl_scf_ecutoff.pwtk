@@ -1,0 +1,17 @@
+load_fromPWI pw.scf.NaCl.in
+
+set fid [open etot_vs_ecutwfc.dat w]
+
+foreach ecut { 12 20 28 36 44 52 60} {
+
+    set name NaCl_scf_ecutwfc-$ecut
+
+    SYSTEM "ecutwfc = $ecut"
+
+    runPW $name.in
+
+    set Etot [::pwtk::pwo::totene $name.out]
+    puts $fid "$ecut $Etot"
+}
+
+close $fid

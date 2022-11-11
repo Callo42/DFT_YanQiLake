@@ -1,0 +1,16 @@
+load_fromPWI pw.scf.NaCl.in
+
+set fid [open etot_vs_kpoint.dat w]
+
+foreach k { 3 7 11 15} {
+
+    set name NaCl_scf_kpoints-$k
+
+    K_POINTS automatic "$k $k $k 0 0 0"
+    runPW $name.in
+
+    set Etot [::pwtk::pwo::totene $name.out]
+    puts $fid "$k $Etot"
+}
+
+close $fid

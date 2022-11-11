@@ -1,0 +1,32 @@
+&control
+  calculation = 'scf'
+  prefix = 'NaCl'
+  pseudo_dir = '../../pseudopotentials/'
+  outdir = './tmp/'
+/
+
+&system
+  ibrav = 2
+  celldm(1) = 11.46057
+  nat = 2
+  ntyp = 2
+  ecutwfc = 60
+  ecutrho = 244
+/
+
+&electrons
+  mixing_mode = 'plain'
+  mixing_beta = 0.7
+  conv_thr = 1.0e-8
+/
+
+ATOMIC_SPECIES
+  Na 22.98977 Na.pbe-spn-kjpaw_psl.1.0.0.UPF
+  Cl 35.4532 Cl.pbe-n-kjpaw_psl.1.0.0.UPF
+
+ATOMIC_POSITIONS
+  Na 0.00 0.00 0.00
+  Cl 0.25 0.25 0.25
+
+K_POINTS {automatic}
+  7 7 7 0 0 0

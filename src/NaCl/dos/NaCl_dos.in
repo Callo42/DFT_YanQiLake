@@ -1,0 +1,7 @@
+&DOS
+  prefix= 'NaCl',
+  outdir= './tmp/',
+  fildos= 'NaCl_dos.dat',
+  emin= -10,
+  emax= 35
+/
