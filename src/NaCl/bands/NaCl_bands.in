@@ -8,7 +8,7 @@
 
 &system
   ibrav = 2
-  celldm(1) = 11.46057
+  celldm(1) = 10.06852
   nat = 2
   ntyp = 2
   ecutwfc = 60
@@ -28,7 +28,7 @@ ATOMIC_SPECIES
 
 ATOMIC_POSITIONS
   Na 0.00 0.00 0.00
-  Cl 0.25 0.25 0.25
+  Cl 0.50 0.00 0.00
 
 K_POINTS {crystal_b}
 5
